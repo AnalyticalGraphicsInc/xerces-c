@@ -49,6 +49,22 @@
       <Configuration>Static Release</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Static Debug MD|Win32">
+      <Configuration>Static Debug MD</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Static Debug MD|x64">
+      <Configuration>Static Debug MD</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Static Release MD|Win32">
+      <Configuration>Static Release MD</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Static Release MD|x64">
+      <Configuration>Static Release MD</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{152CE948-F659-4206-A50A-1D2B9658EF96}</ProjectGuid>
@@ -72,6 +88,16 @@
     <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Static Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Static Release MD|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <PlatformToolset>v140</PlatformToolset>
@@ -108,6 +134,16 @@
     <UseOfMfc>false</UseOfMfc>
     <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Static Release MD|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
@@ -134,6 +170,12 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Static Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Static Release MD|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
@@ -150,6 +192,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Static Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Static Release MD|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
@@ -175,12 +223,20 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Static Release|Win32'">.\..\..\..\..\..\Build\Win32\VC14\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Static Release|Win32'">$(OutDir)obj\$(ProjectName)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Static Release MD|Win32'">.\..\..\..\..\..\Build\Win32\VC14\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Static Release MD|Win32'">$(OutDir)obj\$(ProjectName)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Static Release|x64'">.\..\..\..\..\..\Build\Win64\VC14\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Static Release|x64'">$(OutDir)obj\$(ProjectName)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Static Release MD|x64'">.\..\..\..\..\..\Build\Win64\VC14\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Static Release MD|x64'">$(OutDir)obj\$(ProjectName)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Static Debug|Win32'">.\..\..\..\..\..\Build\Win32\VC14\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Static Debug|Win32'">$(OutDir)obj\$(ProjectName)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|Win32'">.\..\..\..\..\..\Build\Win32\VC14\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|Win32'">$(OutDir)obj\$(ProjectName)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Static Debug|x64'">.\..\..\..\..\..\Build\Win64\VC14\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Static Debug|x64'">$(OutDir)obj\$(ProjectName)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|x64'">.\..\..\..\..\..\Build\Win64\VC14\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|x64'">$(OutDir)obj\$(ProjectName)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='ICU Debug|Win32'">.\..\..\..\..\..\Build\Win32\VC14\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='ICU Debug|Win32'">$(OutDir)obj\$(ProjectName)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='ICU Debug|Win32'">true</LinkIncremental>
@@ -199,12 +255,16 @@
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">xerces-c_3_1</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Static Debug|Win32'">xerces-c_static_3D</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Static Release|Win32'">xerces-c_static_3</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|Win32'">xerces-c_static_3D</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Static Release MD|Win32'">xerces-c_static_3</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">xerces-c_3_1D</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='ICU Debug|x64'">xerces-c_3_1D</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='ICU Release|x64'">xerces-c_3_1</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">xerces-c_3_1</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Static Debug|x64'">xerces-c_static_3D</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Static Release|x64'">xerces-c_static_3</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|x64'">xerces-c_static_3D</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Static Release MD|x64'">xerces-c_static_3</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
@@ -429,6 +489,37 @@
       <OutputFile>$(TargetPath)</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Static Release MD|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)XercesLib.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MinSpace</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\..\..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;NDEBUG;WIN32;_WINDOWS;XERCES_STATIC_LIBRARY;XERCES_BUILDING_LIBRARY;XERCES_USE_TRANSCODER_WINDOWS;XERCES_USE_MSGLOADER_INMEMORY;XERCES_USE_NETACCESSOR_WINSOCK;XERCES_USE_FILEMGR_WINDOWS;XERCES_USE_MUTEXMGR_WINDOWS;XERCES_PATH_DELIMITER_BACKSLASH;HAVE_STRICMP;HAVE_STRNICMP;HAVE_LIMITS_H;HAVE_SYS_TIMEB_H;HAVE_FTIME;HAVE_WCSUPR;HAVE_WCSLWR;HAVE_WCSICMP;HAVE_WCSNICMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)XercesLib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)_vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(TargetPath)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Static Release|x64'">
     <Midl>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -443,6 +534,36 @@
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;NDEBUG;WIN64;_WINDOWS;XERCES_STATIC_LIBRARY;XERCES_BUILDING_LIBRARY;XERCES_USE_TRANSCODER_WINDOWS;XERCES_USE_MSGLOADER_INMEMORY;XERCES_USE_NETACCESSOR_WINSOCK;XERCES_USE_FILEMGR_WINDOWS;XERCES_USE_MUTEXMGR_WINDOWS;XERCES_PATH_DELIMITER_BACKSLASH;HAVE_STRICMP;HAVE_STRNICMP;HAVE_LIMITS_H;HAVE_SYS_TIMEB_H;HAVE_FTIME;HAVE_WCSUPR;HAVE_WCSLWR;HAVE_WCSICMP;HAVE_WCSNICMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)XercesLib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <CompileAs>Default</CompileAs>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)_vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(TargetPath)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Static Release MD|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)XercesLib.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MinSpace</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\..\..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;NDEBUG;WIN64;_WINDOWS;XERCES_STATIC_LIBRARY;XERCES_BUILDING_LIBRARY;XERCES_USE_TRANSCODER_WINDOWS;XERCES_USE_MSGLOADER_INMEMORY;XERCES_USE_NETACCESSOR_WINSOCK;XERCES_USE_FILEMGR_WINDOWS;XERCES_USE_MUTEXMGR_WINDOWS;XERCES_PATH_DELIMITER_BACKSLASH;HAVE_STRICMP;HAVE_STRNICMP;HAVE_LIMITS_H;HAVE_SYS_TIMEB_H;HAVE_FTIME;HAVE_WCSUPR;HAVE_WCSLWR;HAVE_WCSICMP;HAVE_WCSNICMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <PrecompiledHeaderOutputFile>$(IntDir)XercesLib.pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
@@ -489,6 +610,36 @@
       <OutputFile>$(TargetPath)</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)XercesLib.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_DEBUG;WIN32;_WINDOWS;XERCES_STATIC_LIBRARY;XERCES_BUILDING_LIBRARY;XERCES_USE_TRANSCODER_WINDOWS;XERCES_USE_MSGLOADER_INMEMORY;XERCES_USE_NETACCESSOR_WINSOCK;XERCES_USE_FILEMGR_WINDOWS;XERCES_USE_MUTEXMGR_WINDOWS;XERCES_PATH_DELIMITER_BACKSLASH;HAVE_STRICMP;HAVE_STRNICMP;HAVE_LIMITS_H;HAVE_SYS_TIMEB_H;HAVE_FTIME;HAVE_WCSUPR;HAVE_WCSLWR;HAVE_WCSICMP;HAVE_WCSNICMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)XercesLib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)_vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(TargetPath)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Static Debug|x64'">
     <Midl>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -501,6 +652,35 @@
       <AdditionalIncludeDirectories>..\..\..\..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_DEBUG;WIN64;_WINDOWS;XERCES_STATIC_LIBRARY;XERCES_BUILDING_LIBRARY;XERCES_USE_TRANSCODER_WINDOWS;XERCES_USE_MSGLOADER_INMEMORY;XERCES_USE_NETACCESSOR_WINSOCK;XERCES_USE_FILEMGR_WINDOWS;XERCES_USE_MUTEXMGR_WINDOWS;XERCES_PATH_DELIMITER_BACKSLASH;HAVE_STRICMP;HAVE_STRNICMP;HAVE_LIMITS_H;HAVE_SYS_TIMEB_H;HAVE_FTIME;HAVE_WCSUPR;HAVE_WCSLWR;HAVE_WCSICMP;HAVE_WCSNICMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)XercesLib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)_vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(TargetPath)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>$(OutDir)XercesLib.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_DEBUG;WIN64;_WINDOWS;XERCES_STATIC_LIBRARY;XERCES_BUILDING_LIBRARY;XERCES_USE_TRANSCODER_WINDOWS;XERCES_USE_MSGLOADER_INMEMORY;XERCES_USE_NETACCESSOR_WINSOCK;XERCES_USE_FILEMGR_WINDOWS;XERCES_USE_MUTEXMGR_WINDOWS;XERCES_PATH_DELIMITER_BACKSLASH;HAVE_STRICMP;HAVE_STRNICMP;HAVE_LIMITS_H;HAVE_SYS_TIMEB_H;HAVE_FTIME;HAVE_WCSUPR;HAVE_WCSLWR;HAVE_WCSICMP;HAVE_WCSNICMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeaderOutputFile>$(IntDir)XercesLib.pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
@@ -805,6 +985,16 @@ copy "%(RootDir)%(Directory)%(Filename).msvc.hpp" "%(FullPath)"
 </Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Static Debug|x64'">%(RootDir)%(Directory)\%(Filename).msvc.hpp;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Static Debug|x64'">%(FullPath);%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|Win32'">echo copy "%(RootDir)%(Directory)%(Filename).msvc.hpp" "%(FullPath)"
+copy "%(RootDir)%(Directory)%(Filename).msvc.hpp" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|Win32'">%(RootDir)%(Directory)\%(Filename).msvc.hpp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|Win32'">%(FullPath);%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|x64'">echo copy "%(RootDir)%(Directory)%(Filename).msvc.hpp" "%(FullPath)"
+copy "%(RootDir)%(Directory)%(Filename).msvc.hpp" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|x64'">%(RootDir)%(Directory)\%(Filename).msvc.hpp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|x64'">%(FullPath);%(Outputs)</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Static Release|Win32'">echo copy "%(RootDir)%(Directory)%(Filename).msvc.hpp" "%(FullPath)"
 copy "%(RootDir)%(Directory)%(Filename).msvc.hpp" "%(FullPath)"
 </Command>
@@ -815,6 +1005,16 @@ copy "%(RootDir)%(Directory)%(Filename).msvc.hpp" "%(FullPath)"
 </Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Static Release|x64'">%(RootDir)%(Directory)\%(Filename).msvc.hpp;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Static Release|x64'">%(FullPath);%(Outputs)</Outputs>
+	  <Command Condition="'$(Configuration)|$(Platform)'=='Static Release MD|Win32'">echo copy "%(RootDir)%(Directory)%(Filename).msvc.hpp" "%(FullPath)"
+copy "%(RootDir)%(Directory)%(Filename).msvc.hpp" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Static Release MD|Win32'">%(RootDir)%(Directory)\%(Filename).msvc.hpp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Static Release MD|Win32'">%(FullPath);%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Static Release MD|x64'">echo copy "%(RootDir)%(Directory)%(Filename).msvc.hpp" "%(FullPath)"
+copy "%(RootDir)%(Directory)%(Filename).msvc.hpp" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Static Release MD|x64'">%(RootDir)%(Directory)\%(Filename).msvc.hpp;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Static Release MD|x64'">%(FullPath);%(Outputs)</Outputs>
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\src\xercesc\util\XercesDefs.hpp" />
     <ClInclude Include="..\..\..\..\..\src\xercesc\util\XercesVersion.hpp" />
@@ -869,6 +1069,10 @@ copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"</Command>
 copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Static Release|Win32'">echo copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"
 copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|Win32'">echo copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"
+copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Static Release MD|Win32'">echo copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"
+copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">echo copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"
 copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='ICU Debug|x64'">echo copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"
@@ -881,17 +1085,25 @@ copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"</Command>
 copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Static Release|x64'">echo copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"
 copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|x64'">echo copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"
+copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Static Release MD|x64'">echo copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"
+copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='ICU Debug|Win32'">%(RootDir)%(Directory)Xerces_autoconf_config.hpp</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='ICU Release|Win32'">%(RootDir)%(Directory)Xerces_autoconf_config.hpp</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)Xerces_autoconf_config.hpp</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Static Debug|Win32'">%(RootDir)%(Directory)Xerces_autoconf_config.hpp</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Static Release|Win32'">%(RootDir)%(Directory)Xerces_autoconf_config.hpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|Win32'">%(RootDir)%(Directory)Xerces_autoconf_config.hpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Static Release MD|Win32'">%(RootDir)%(Directory)Xerces_autoconf_config.hpp</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(RootDir)%(Directory)Xerces_autoconf_config.hpp</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='ICU Debug|x64'">%(RootDir)%(Directory)Xerces_autoconf_config.hpp</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='ICU Release|x64'">%(RootDir)%(Directory)Xerces_autoconf_config.hpp</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(RootDir)%(Directory)Xerces_autoconf_config.hpp</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Static Debug|x64'">%(RootDir)%(Directory)Xerces_autoconf_config.hpp</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Static Release|x64'">%(RootDir)%(Directory)Xerces_autoconf_config.hpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|x64'">%(RootDir)%(Directory)Xerces_autoconf_config.hpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Static Release MD|x64'">%(RootDir)%(Directory)Xerces_autoconf_config.hpp</Outputs>
     </CustomBuild>
     <CustomBuildStep Include="..\..\..\..\..\src\xercesc\util\MsgLoaders\InMemory\InMemMsgLoader.hpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -907,6 +1119,8 @@ copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"</Command>
     <CustomBuildStep Include="..\..\..\..\..\src\xercesc\util\MsgLoaders\Win32\Win32MsgLoader.hpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|x64'">true</ExcludedFromBuild>
     </CustomBuildStep>
     <CustomBuildStep Include="..\..\..\..\..\src\xercesc\util\MsgLoaders\InMemory\XercesMessages_en_US.hpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -1316,6 +1530,10 @@ copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"</Command>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Release MD|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Release MD|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\src\xercesc\util\Transcoders\ICU\ICUTransService.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -1326,6 +1544,10 @@ copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"</Command>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Release MD|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Release MD|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\src\xercesc\util\Transcoders\Win32\Win32TransService.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ICU Debug|Win32'">true</ExcludedFromBuild>
@@ -1599,10 +1821,18 @@ copy "%(FullPath)" "%(RootDir)%(Directory)Xerces_autoconf_config.hpp"</Command>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Static Debug|Win32'">..\..\..\..\..\src\xercesc\util\MsgLoaders\Win32</AdditionalIncludeDirectories>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Debug|x64'">true</ExcludedFromBuild>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Static Debug|x64'">..\..\..\..\..\src\xercesc\util\MsgLoaders\Win32</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|Win32'">..\..\..\..\..\src\xercesc\util\MsgLoaders\Win32</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|x64'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Static Debug MD|x64'">..\..\..\..\..\src\xercesc\util\MsgLoaders\Win32</AdditionalIncludeDirectories>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Release|Win32'">true</ExcludedFromBuild>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Static Release|Win32'">..\..\..\..\..\src\xercesc\util\MsgLoaders\Win32</AdditionalIncludeDirectories>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Release|x64'">true</ExcludedFromBuild>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Static Release|x64'">..\..\..\..\..\src\xercesc\util\MsgLoaders\Win32</AdditionalIncludeDirectories>
+	  <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Release MD|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Static Release MD|Win32'">..\..\..\..\..\src\xercesc\util\MsgLoaders\Win32</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Static Release MD|x64'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Static Release MD|x64'">..\..\..\..\..\src\xercesc\util\MsgLoaders\Win32</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
