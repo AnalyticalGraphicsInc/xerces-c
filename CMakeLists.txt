@@ -142,10 +142,20 @@ install(
   COMPONENT "development")
 
 # Process subdirectories
-add_subdirectory(doc)
+OPTION(BUILD_DOC "Build Documentation" OFF)
+OPTION(BUILD_SAMPLES "Build Samples" OFF)
+OPTION(BUILD_TESTS "Build Tests" OFF)
+
 add_subdirectory(src)
-add_subdirectory(tests)
-add_subdirectory(samples)
+if(BUILD_DOC)
+  add_subdirectory(doc)
+endif(BUILD_DOC)
+if(BUILD_TESTS)
+  add_subdirectory(tests)
+endif(BUILD_TESTS)
+if(BUILD_SAMPLES)
+  add_subdirectory(samples)
+endif(BUILD_SAMPLES)
 
 # Display configuration summary
 message(STATUS "")
