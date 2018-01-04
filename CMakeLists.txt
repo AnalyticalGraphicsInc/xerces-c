@@ -87,7 +87,7 @@ set(EXTRA_DIST
   tools
 )
 
-OPTION(WITH_ICU "Build With ICU" OFF)
+OPTION(WITH_ICU "Build With ICU" ON)
 
 include(GNUInstallDirs)
 include(XercesWarnings)
@@ -146,9 +146,9 @@ install(
   COMPONENT "development")
 
 # Process subdirectories
-OPTION(BUILD_DOC "Build Documentation" OFF)
-OPTION(BUILD_SAMPLES "Build Samples" OFF)
-OPTION(BUILD_TESTS "Build Tests" OFF)
+OPTION(BUILD_DOC "Build Documentation" ON)
+OPTION(BUILD_SAMPLES "Build Samples" ON)
+OPTION(BUILD_TESTS "Build Tests" ON)
 
 add_subdirectory(src)
 if(BUILD_DOC)
