@@ -87,6 +87,8 @@ set(EXTRA_DIST
   tools
 )
 
+OPTION(WITH_ICU "Build With ICU" OFF)
+
 include(GNUInstallDirs)
 include(XercesWarnings)
 include(XercesIncludes)
@@ -94,7 +96,9 @@ include(XercesFunctions)
 include(XercesDLL)
 include(XercesIntTypes)
 include(XercesPathDelimiters)
-include(XercesICU)
+IF(WITH_ICU)
+  include(XercesICU)
+ENDIF(WITH_ICU)
 include(XercesMutexMgrSelection)
 include(XercesNetAccessorSelection)
 include(XercesMsgLoaderSelection)
