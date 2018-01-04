@@ -24,6 +24,8 @@
 #include <xercesc/internal/XMLReader.hpp>
 #include <xercesc/framework/MemoryManager.hpp>
 
+#include <config.h>
+
 XERCES_CPP_NAMESPACE_BEGIN
 
 // ---------------------------------------------------------------------------
