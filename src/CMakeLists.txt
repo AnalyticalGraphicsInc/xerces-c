@@ -1266,6 +1266,7 @@ if(MSVC)
   set_target_properties(xerces-c PROPERTIES RUNTIME_OUTPUT_NAME "xerces-c_${LIB_INTERFACE_VER_U}")
   set_target_properties(xerces-c PROPERTIES DEBUG_POSTFIX "D")
 elseif(UNIX)
+if(NOT APPLE)
   # For strict libtool compatibility on Unix.  It's a horrible hack to
   # set the version in the filename, and create the symlink at install
   # time.  Note: could be dropped when the SONAME is updated and
@@ -1275,6 +1276,7 @@ elseif(UNIX)
     OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/InstallLibrarySymlink.cmake"
     CONTENT "execute_process(COMMAND ln -sf \"$<TARGET_FILE_NAME:xerces-c>\" \"\$ENV{DESTDIR}${CMAKE_INSTALL_FULL_LIBDIR}/libxerces-c.so\")")
   install(SCRIPT "${CMAKE_CURRENT_BINARY_DIR}/InstallLibrarySymlink.cmake")
+endif()
 else()
   # Not used for the common cases, though this would be the default if
   # not for libtool compatibility.
